@@ -7,9 +7,21 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3;
+    [SerializeField] private float jumpPower = 3;
     private CharacterController _characterController;
     private Transform _transform;
     private Vector3 _moveVelocity;
+
+    private bool IsGrounded
+    {
+        get
+        {
+            var ray = new Ray(_transform.position + new Vector3(0, 0.1f), Vector3.down);
+            var raycastHits = new RaycastHit[1];
+            var hitCount = Physics.RaycastNonAlloc(ray, raycastHits, 0.2f);
+            return hitCount >= 1;
+        }
+    }
 
     private void Start()
     {
@@ -24,7 +36,14 @@ public class PlayerController : MonoBehaviour
 
         _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
         
-        if (!_characterController.isGrounded)
+        if (IsGrounded)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                _moveVelocity.y = jumpPower;
+            }
+        }
+        else
         {
             _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
         }
