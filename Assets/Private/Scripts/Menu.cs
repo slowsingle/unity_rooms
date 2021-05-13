@@ -7,7 +7,6 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private Button openDoorButton;
     [SerializeField] private doorOpenPanel doorOpenPanel;
-    [SerializeField] private DoorController doorController;
 
     private void Start()
     {

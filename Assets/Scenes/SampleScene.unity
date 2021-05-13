@@ -2043,6 +2043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 584718001}
   enterButton: {fileID: 554768936}
+  doorController: {fileID: 1743707511}
+  password: 5555
 --- !u!1 &1361341257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,7 +2348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openDoorButton: {fileID: 10092310}
   doorOpenPanel: {fileID: 1322881682}
-  doorController: {fileID: 2004419449}
 --- !u!1001 &1554995831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2976,6 +2977,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1743707510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581379213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743707511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743707510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c629e77269375e4faeb652887106524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1743707512}
+  coroutineOpenAndClose: 0
+--- !u!95 &1743707512 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9546954, guid: 820591594dcfa124d8a9c5d016d6c22c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581379213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789562309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 164916, guid: ed5a181593a2a401aa30a8480e084370,

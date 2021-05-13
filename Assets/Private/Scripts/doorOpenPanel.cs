@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class doorOpenPanel : MonoBehaviour
 {
+    /*
+      パスワード入力画面。正しいパスワードを入れると、扉が開く。
+    */
+
     [SerializeField] private InputField inputField;
     [SerializeField] private Button enterButton;
+    [SerializeField] private DoorController doorController;
+    [SerializeField] private string password;
 
     private void Start()
     {
@@ -18,13 +24,13 @@ public class doorOpenPanel : MonoBehaviour
     {
         Debug.Log(inputField.text);
 
-        if (inputField.text.Equals("5555"))
+        if (inputField.text.Equals(password))
         {
-
+            doorController.open();
         }
         else
         {
-
+            doorController.close();
         }
 
         activate(false);
