@@ -6,27 +6,17 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Button openDoorButton;
+    [SerializeField] private doorOpenPanel doorOpenPanel;
     [SerializeField] private DoorController doorController;
-    [SerializeField] private InputField inputField;
 
     private void Start()
     {
-        openDoorButton.onClick.AddListener(ToggleDoor);
-        inputField = inputField.GetComponent<InputField>();
+        doorOpenPanel.activate(false);
+        openDoorButton.onClick.AddListener(ToggleOpenDoorPanel);
     }
 
-    private void ToggleDoor()
+    private void ToggleOpenDoorPanel()
     {
-        Debug.Log(inputField.text);
-
-        if (inputField.text.Equals("5555"))
-        {
-            doorController.open();
-        }
-        else
-        {
-            doorController.close();
-        }
-        
+        doorOpenPanel.activate(true);
     }
 }
