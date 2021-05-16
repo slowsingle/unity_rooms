@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     private Transform _transform;
     private Vector3 _moveVelocity;
 
+    // ワープによる強制移動があるかどうか？
+    private bool isForcedPosition = false;
+    private Vector3 forcedPosition;
+
     private bool IsGrounded
     {
         get
@@ -32,25 +36,43 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
-        _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
-
-        _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
-        
-        if (IsGrounded)
+        if (isForcedPosition)
         {
-            if (Input.GetButtonDown("Jump"))
-            {
-                _moveVelocity.y = jumpPower;
-            }
+            // https://gametukurikata.com/basic/pitfallsofcharactercontroller をもとに修正
+            _characterController.enabled = false;
+            _transform.position = forcedPosition;
+            _moveVelocity = new Vector3(0, 0, 0);
+            _characterController.enabled = true;
+            isForcedPosition = false;
         }
         else
         {
-            _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
+            _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
+            _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
+
+            _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
+            
+            if (IsGrounded)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    _moveVelocity.y = jumpPower;
+                }
+            }
+            else
+            {
+                _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
+            }
+
+            _characterController.Move(_moveVelocity * Time.deltaTime);
+
+            animator.SetFloat("MoveSpeed", new Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
         }
+    }
 
-        _characterController.Move(_moveVelocity * Time.deltaTime);
-
-        animator.SetFloat("MoveSpeed", new Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
+    public void SetForcedPosition(Vector3 position)
+    {
+        isForcedPosition = true;
+        forcedPosition = position;
     }
 }
