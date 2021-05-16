@@ -6,8 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 3;
-    [SerializeField] private float jumpPower = 3;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpPower;
     [SerializeField] private Animator animator;
     private CharacterController _characterController;
     private Transform _transform;
@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal");
-        _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical");
+        _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
+        _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
 
         _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
         
