@@ -16,7 +16,7 @@ public class WarpPlayer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Warp");
+            //Debug.Log("Warp");
             playerController.SetForcedPosition(warpDestination.position);
             //Debug.Log(warpDestination.position);
         } 

@@ -41,13 +41,13 @@ public class PushButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
+        //Debug.Log("Enter");
         isEnter = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit");
+        //Debug.Log("Exit");
         isEnter = false;
     }
 
