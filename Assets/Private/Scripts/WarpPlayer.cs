@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class WarpPlayer : MonoBehaviour
 {
-    [SerializeField] PlayerController playerController;
-    
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private Transform warpDestination;
     private void Start()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,7 +17,8 @@ public class WarpPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Warp");
-            playerController.SetForcedPosition(new Vector3(0, 0, -3));
+            playerController.SetForcedPosition(warpDestination.position);
+            //Debug.Log(warpDestination.position);
         } 
     }
 }
