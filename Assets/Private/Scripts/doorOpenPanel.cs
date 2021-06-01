@@ -33,6 +33,7 @@ public class doorOpenPanel : MonoBehaviour
             doorController.close();
         }
 
+        inputField.text = "";
         activate(false);
     }
 
