@@ -1,54 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 
 [RequireComponent(typeof(Collider))]
-public class PushButton : MonoBehaviour
+public class PushButton : BaseButton
 {
-    [SerializeField] private Animator animator;
     [SerializeField] private DoorController doorController;
-    private bool isPush = false;
-    private bool isEnter = false;
-    
-    private void Start()
+
+    protected override void Start()
     {
-        animator = GetComponent<Animator>();
-        //StartCoroutine(ButtonPushAndBack());
+        base.Start();
     }
 
-
-    private void Update()
+    protected override void DoSomethingAsPushing()
     {
-        if (isEnter && CrossPlatformInputManager.GetButtonDown("push"))
+        base.DoSomethingAsPushing();
+
+        if (isPush)
         {
-            if (isPush)
-            {
-                animator.SetBool("try_to_push", false);
-                doorController.close();
-                isPush = false;
-            }
-            else
-            {
-                animator.SetBool("try_to_push", true);
-                doorController.open();
-                isPush = true;
-            }
-            new WaitForSeconds(1);
+            doorController.open();
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("Enter");
-        isEnter = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        //Debug.Log("Exit");
-        isEnter = false;
+        else
+        {
+            doorController.close();
+        }
     }
 
 }
