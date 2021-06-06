@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private bool isForcedPosition = false;
     private Vector3 forcedPosition;
 
+    // ゴールしたか？
+    private bool isGoal = false;
+
     private bool IsGrounded
     {
         get
@@ -47,25 +50,32 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
-            _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
-
-            _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
-            
-            if (IsGrounded)
+            if (isGoal)
             {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    _moveVelocity.y = jumpPower;
-                }
+                _moveVelocity = new Vector3(0, 0, 0);
+                _moveVelocity.y += 2.0f;
             }
             else
             {
-                _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
+                _moveVelocity.x = CrossPlatformInputManager.GetAxis("Horizontal") * moveSpeed;
+                _moveVelocity.z = CrossPlatformInputManager.GetAxis("Vertical") * moveSpeed;
+
+                _transform.LookAt(_transform.position + new Vector3(_moveVelocity.x, 0, _moveVelocity.z));
+
+                if (IsGrounded)
+                {
+                    if (Input.GetButtonDown("Jump"))
+                    {
+                        _moveVelocity.y = jumpPower;
+                    }
+                }
+                else
+                {
+                    _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
+                }
             }
 
             _characterController.Move(_moveVelocity * Time.deltaTime);
-
             animator.SetFloat("MoveSpeed", new Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
         }
     }
@@ -74,5 +84,10 @@ public class PlayerController : MonoBehaviour
     {
         isForcedPosition = true;
         forcedPosition = position;
+    }
+
+    public void SetGoingUp()
+    {
+        isGoal = true;
     }
 }
