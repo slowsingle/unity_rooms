@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12662034, g: 0.7075472, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1250,7 +1250,7 @@ GameObject:
   - component: {fileID: 245337267}
   - component: {fileID: 245337266}
   m_Layer: 5
-  m_Name: ImgHidden_3006_0
+  m_Name: ImgHidden_3006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2285,7 +2285,7 @@ GameObject:
   - component: {fileID: 479586138}
   - component: {fileID: 479586137}
   m_Layer: 5
-  m_Name: ImgHidden_3008_multiple
+  m_Name: ImgHidden_3008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49019608, g: 0, b: 0.78431374, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2453,7 +2453,7 @@ GameObject:
   - component: {fileID: 506002645}
   - component: {fileID: 506002644}
   m_Layer: 5
-  m_Name: ImgHidden_3005_1
+  m_Name: ImgHidden_3005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.68042916, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 506959860}
   - component: {fileID: 506959859}
   m_Layer: 5
-  m_Name: ImgHidden_3010_plus
+  m_Name: ImgHidden_3010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3049,7 +3049,7 @@ GameObject:
   - component: {fileID: 580532594}
   - component: {fileID: 580532593}
   m_Layer: 5
-  m_Name: ImgHidden_3012_equal
+  m_Name: ImgHidden_3012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3087,7 +3087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3472,7 +3472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.68042916, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 908639552}
   - component: {fileID: 908639551}
   m_Layer: 5
-  m_Name: ImgHidden_3002_7
+  m_Name: ImgHidden_3002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4371,7 +4371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.29543877, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5151,7 +5151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.29543877, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6294,7 +6294,7 @@ GameObject:
   - component: {fileID: 1256025749}
   - component: {fileID: 1256025748}
   m_Layer: 5
-  m_Name: ImgHidden_3004_plus
+  m_Name: ImgHidden_3004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6368,7 +6368,7 @@ GameObject:
   - component: {fileID: 1264780810}
   - component: {fileID: 1264780809}
   m_Layer: 5
-  m_Name: ImgHidden_3003_9
+  m_Name: ImgHidden_3003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6406,7 +6406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.47058824, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6819,7 +6819,13 @@ MonoBehaviour:
   inputField: {fileID: 584718001}
   enterButton: {fileID: 554768936}
   doorController: {fileID: 1743707511}
-  password: 7451
+  question: 7451
+  answer: 7451
+  imageList:
+  - {fileID: 1022165632}
+  - {fileID: 780029235}
+  - {fileID: 79749532}
+  - {fileID: 631513711}
 --- !u!1 &1326464788
 GameObject:
   m_ObjectHideFlags: 0
@@ -7503,7 +7509,21 @@ MonoBehaviour:
   inputField: {fileID: 69253054}
   enterButton: {fileID: 1661554201}
   doorController: {fileID: 1243392762}
-  password: 816
+  question: 379+108x4+5=
+  answer: 816
+  imageList:
+  - {fileID: 1573258052}
+  - {fileID: 908639551}
+  - {fileID: 1264780809}
+  - {fileID: 1256025748}
+  - {fileID: 506002644}
+  - {fileID: 245337266}
+  - {fileID: 2026006507}
+  - {fileID: 479586137}
+  - {fileID: 2142817416}
+  - {fileID: 506959859}
+  - {fileID: 1563756105}
+  - {fileID: 580532593}
 --- !u!114 &1511687494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8190,7 +8210,7 @@ GameObject:
   - component: {fileID: 1563756106}
   - component: {fileID: 1563756105}
   m_Layer: 5
-  m_Name: ImgHidden_3011_5
+  m_Name: ImgHidden_3011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8228,7 +8248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12662034, g: 0.7075472, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8264,7 +8284,7 @@ GameObject:
   - component: {fileID: 1573258053}
   - component: {fileID: 1573258052}
   m_Layer: 5
-  m_Name: ImgHidden_3001_3
+  m_Name: ImgHidden_3001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8302,7 +8322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.990566, g: 0.62352943, b: 0.990566, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10318,7 +10338,7 @@ GameObject:
   - component: {fileID: 2026006508}
   - component: {fileID: 2026006507}
   m_Layer: 5
-  m_Name: ImgHidden_3007_8
+  m_Name: ImgHidden_3007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10356,7 +10376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4509804, g: 0.25882354, b: 0.16078432, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10770,7 +10790,7 @@ GameObject:
   - component: {fileID: 2142817417}
   - component: {fileID: 2142817416}
   m_Layer: 5
-  m_Name: ImgHidden_3009_4
+  m_Name: ImgHidden_3009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10808,7 +10828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
