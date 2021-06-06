@@ -14834,7 +14834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1789562310}
-  changeSceneDelay: 2
+  changeSceneDelay: 3
 --- !u!1 &1881397244
 GameObject:
   m_ObjectHideFlags: 0
